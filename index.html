@@ -8,7 +8,7 @@
     <meta name="description" content="Welcome to Riya K Alex's Portfolio. Electronics & Communication Engineer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/x-jpg">
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Riya K Alex </title>
     
     <style>
@@ -17,6 +17,13 @@
             opacity: 1 !important;
             visibility: visible !important;
             transform: none !important;
+        }
+        /* Extra override - prevent ScrollReveal from hiding projects */
+        .projects .box, .projects .box * {
+            opacity: 1 !important;
+            visibility: visible !important;
+            transform: none !important;
+            transition: box-shadow 0.3s ease !important;
         }
 
         /* MODAL STYLES */
@@ -281,7 +288,7 @@
     </div>
 
     <div class="box tilt" onclick="openProject('Automated Compost Converter', 'Features automated waste input mechanisms and sensor-controlled temperature and humidity management. It uses an ESP32 microcontroller with pH sensors and load cells to optimize biological microbial action for high-quality compost.')">
-      <img draggable="false" src="./assets/images/projects/compost.jpg" alt="Waste-to-Compost" />
+      <img draggable="false" src="./assets/images/projects/compost.png" alt="Waste-to-Compost" />
       <div class="content">
         <div class="tag">
           <h3>Waste-to-Compost</h3>
@@ -405,6 +412,21 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="./assets/js/script.js"></script>
+<script>
+    // Force projects visible after ScrollReveal runs
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.querySelectorAll('.projects .box, #projects, #skills .bar').forEach(function(el) {
+                el.style.cssText += 'opacity:1!important;visibility:visible!important;transform:none!important;';
+            });
+        }, 100);
+        setTimeout(function() {
+            document.querySelectorAll('.projects .box, #projects, #skills .bar').forEach(function(el) {
+                el.style.cssText += 'opacity:1!important;visibility:visible!important;transform:none!important;';
+            });
+        }, 1000);
+    });
+</script>
 
 <script>
     function openProject(title, description) {
