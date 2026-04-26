@@ -51,7 +51,6 @@ $(document).ready(function () {
 const skills = [
     { name: "Verilog HDL", icon: "https://img.icons8.com/color/48/000000/processor.png" },
     { name: "KiCad PCB", icon: "https://img.icons8.com/color/48/000000/circuit.png" },
-    { name: "SystemVerilog", icon: "https://img.icons8.com/color/48/000000/microchip.png" },
     { name: "Embedded C", icon: "https://img.icons8.com/color/48/000000/c-programming.png" },
     { name: "Edge AI", icon: "https://img.icons8.com/color/48/000000/artificial-intelligence.png" },
     { name: "C++", icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" },
