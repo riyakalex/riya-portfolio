@@ -7,12 +7,12 @@
     <meta name="keywords" content="riya k alex, portfolio, riya, full stack dev, personal portfolio lifecodes, portfolio design, portfolio website, personal portfolio" />
     <meta name="description" content="Welcome to Riya K Alex's Portfolio. Electronics & Communication Engineer" />
     <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Riya K Alex </title>
     
     <style>
-        /* Force visibility for skills & projects to override ScrollReveal bugs */
+        /* Force visibility for skills & projects */
         #skills, #projects, #skillsContainer, .box-container, .bar, .box {
             opacity: 1 !important;
             visibility: visible !important;
@@ -48,18 +48,17 @@
         #modalBody h3 { color: #ffae00; font-size: 2.5rem; margin-bottom: 15px; }
         #modalBody p { font-size: 1.6rem; line-height: 1.8; color: #eee; }
         
-        /* Ensure the boxes respond to clicks over their entire area */
         .projects .box { cursor: pointer; }
-        .projects .box * { pointer-events: none; } 
+        .projects .box img { height: 100%; width: 100%; object-fit: cover; }
     </style>
 </head>
 <body oncontextmenu="return false">
 
 <header>
-        <span class="logo">
+        <a href="#home" class="logo">
             <img src="./assets/images/logo.png" alt="Logo" style="height: 35px; vertical-align: middle; margin-right: 8px;">
             Riya K Alex
-        </span>
+        </a>
 
         <div id="menu" class="fas fa-bars"></div>
         <nav class="navbar">
@@ -73,9 +72,9 @@
             </ul>
         </nav>
 </header>
+
 <section class="home" id="home">
     <div id="particles-js"></div>
-
     <div class="content">
     <h2>Hi There,<br/> I'm Riya K <span>Alex </span></h2>
     <p>i am into <span class="typing-text"></span></p>
@@ -84,319 +83,148 @@
     </a>
     <div class="socials">
         <ul class="social-icons">
-          <li><a class="linkedin" aria-label="LinkedIn" href="https://linkedin.com/in/riyakalex" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
-          <li><a class="github" aria-label="GitHub" href="https://github.com/riyakalex " target="_blank"><i class="fab fa-github"></i></a></li>
-          <li><a class="gmail" aria-label="Email" href="mailto:riyakalex5@gmail.com"><i class="fas fa-envelope"></i></a></li>
+          <li><a class="linkedin" href="https://linkedin.com/in/riyakalex" target="_blank"><i class="fab fa-linkedin"></i></a></li> 
+          <li><a class="github" href="https://github.com/riyakalex " target="_blank"><i class="fab fa-github"></i></a></li>
+          <li><a class="gmail" href="mailto:riyakalex5@gmail.com"><i class="fas fa-envelope"></i></a></li>
         </ul>
       </div>
     </div>
-<div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
-</div>
+    <div class="image">
+        <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
+    </div>
 </section>
+
 <section class="about" id="about">
     <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
-    
     <div class="row">
-
     <div class="image">
         <img draggable="false" class="tilt" src="./assets/images/profile2.jpeg" alt="">
     </div>
     <div class="content">
         <h3>I'm Riya K Alex</h3>
         <span class="tag">Electronics & Communication Engineer</span>
-        
-        <p>I'm a ECE student at UVCE, driven by a curiosity for how hardware actually projects under the hood.
-          Currently, I'm exploring the intersection of digital logic and sustainable systems, essentially trying to see how we can build more efficient electronics to solve problems.
-         I'm also interested in video editing and writing poems and articles.
-          I've found that the precision needed for a circuit isn't all that different from the rhythm needed for a verse.
-         </p>
-        
+        <p>I'm a ECE student at UVCE, driven by a curiosity for how hardware actually projects under the hood. Currently, I'm exploring digital logic and sustainable systems.</p>
         <div class="box-container">
             <div class="box">
               <p><span> email : </span> riyakalex5@gmail.com</p>
               <p><span> place : </span> Bengaluru, India</p>
             </div>
         </div>
-        
         <div class="resumebtn">
-            <a href="./assets/images/riya_resume.pdf" target="_blank" class="btn">
-                <span>Resume</span>
-                <i class="fas fa-chevron-right"></i>
-            </a>
+            <a href="./assets/images/riya_resume.pdf" target="_blank" class="btn"><span>Resume</span><i class="fas fa-chevron-right"></i></a>
         </div>
     </div>
     </div>
 </section>
+
 <section class="skills" id="skills">
     <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
     <div class="container">
-          <div class="row" id="skillsContainer" style="display: flex !important; flex-wrap: wrap !important; justify-content: center !important;">
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/processor.png" alt="Verilog"/>
-                <span>Verilog</span>
-              </div>
-            </div>
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/circuit.png" alt="KiCad PCB"/>
-                <span>KiCad PCB</span>
-              </div>
-            </div>
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/arduino.png" alt="Arduino"/>
-                <span>Arduino</span>
-              </div>
-            </div>
-
-
-            <div class="bar">
-                <div class="info">
-                  <img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C"/>
-                  <span>C</span>
-                </div>
-            </div>
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" alt="C++"/>
-                <span>C++</span>
-              </div>
-            </div>
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python"/>
-                <span>Python</span>
-              </div>
-            </div>
-
-            <div class="bar">
-                <div class="info">
-                  <img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="Edge AI"/>
-                  <span>Edge AI</span>
-                </div>
-            </div>
-
-            <div class="bar">
-                <div class="info">
-                  <img src="https://img.icons8.com/color/48/000000/video-editing.png" alt="VFX"/>
-                  <span>VFX (Fusion)</span>
-                </div>
-            </div>
-
-            <div class="bar">
-                <div class="info">
-                  <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva"/>
-                  <span>Canva</span>
-                </div>
-            </div>
-
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub"/>
-                <span>GitHub</span>
-              </div>
-            </div>
-      </div>
-</div>
+          <div class="row" id="skillsContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/000000/processor.png" alt="Verilog"/><span>Verilog HDL</span></div></div>
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/000000/circuit.png" alt="KiCad PCB"/><span>KiCad PCB</span></div></div>
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/000000/arduino.png" alt="Arduino"/><span>Arduino</span></div></div>
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/000000/c-programming.png" alt="C"/><span>C</span></div></div>
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/color/48/000000/python--v1.png" alt="Python"/><span>Python</span></div></div>
+            <div class="bar"><div class="info"><img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub"/><span>GitHub</span></div></div>
+          </div>
+    </div>
 </section>
+
 <section class="education" id="education">
-
   <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
-
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
-
     <div class="box-container">
-
     <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
-        </div>
+        <div class="image"><img src="./assets/images/educat/college.jpg" alt=""></div>
         <div class="content">
-        <h3>Bachelor of Engineering in Electronics and Communication</h3>
+        <h3>Bachelor of Engineering in ECE</h3>
         <p>University of Visvesvaraya College of Engineering | Bengaluru</p>
         <h4>Pursuing</h4>
         </div>
     </div>
-
     <div class="box">
-      <div class="image">
-      <img draggable="false" src="./assets/images/educat/school.jpg" alt="">
-      </div>
+      <div class="image"><img src="./assets/images/educat/school.jpg" alt=""></div>
       <div class="content">
       <h3>PUC </h3>
       <p>M K C P M PU College | N R Pura</p>
       <h4>Completed</h4>
       </div>
     </div>
-
 </div>
 </section>
 
 <section class="projects" id="projects">
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
-
   <div class="box-container">
-
-    <div class="box tilt" onclick="openProject('AI Water Purification', 'Project Lead for an AI-powered, low-cost filtration system. It uses an ESP32 microcontroller to collect data from pH, TDS, and turbidity sensors, processing it with an embedded AI model to automate purification via UVC LED and pump control.')">
-      <img draggable="false" src="./assets/images/projects/water.png" alt="AI Water Purification" />
-      <div class="content">
-        <div class="tag">
-          <h3>AI Water Purification</h3>
-        </div>
-        <div class="desc">
-          <p>An intelligent system using machine learning and real-time sensor data to classify water safety and automate purification actions. It provides potable water in resource-constrained environments by monitoring pH, TDS, and turbidity.</p>
-        </div>
-      </div>
+    <div class="box tilt" onclick="openProject('AI Water Purification', 'Project Lead for an AI-powered, low-cost filtration system using ESP32 with pH, TDS, and turbidity sensors.')">
+      <img src="./assets/images/projects/water.jpeg" alt="Water" />
+      <div class="content"><div class="tag"><h3>AI Water Purification</h3></div></div>
     </div>
-
-    <div class="box tilt" onclick="openProject('ISRO Hackathon: Chanakya', 'Developed for the Bharatiya Antariksh Hackathon 2025, this system uses natural language querying to perform complex spatial tasks. The architecture utilizes Google Gemini and LangGraph to orchestrate geospatial tools like GeoPandas and Folium for automated map generation.')">
-      <img draggable="false" src="./assets/images/projects/isro.png" alt="ISRO Project" />
-      <div class="content">
-        <div class="tag">
-          <h3>ISRO-Themed Project</h3>
-        </div>
-        <div class="desc">
-          <p>A chain-of-thought based LLM system for complex spatial analysis through intelligent geoprocessing orchestration. It enables explainable step-by-step processing for urban planning and disaster mapping.</p>
-        </div>
-      </div>
+    <div class="box tilt" onclick="openProject('ISRO-Themed Project', 'LLM geoprocessing system using Google Gemini and LangGraph for complex spatial tasks.')">
+      <img src="./assets/images/projects/isro.jpeg" alt="ISRO" />
+      <div class="content"><div class="tag"><h3>ISRO-Themed Project</h3></div></div>
     </div>
-
-    <div class="box tilt" onclick="openProject('Smart Kitchen Gas Protection', 'Utilizes MQ-2 and MQ-7 sensors to detect LPG, methane, and CO concentration levels. An ESP32 microcontroller monitors thresholds in real-time to trigger immediate buzzer alarms and safety shut-off valves.')">
-      <img draggable="false" src="./assets/images/projects/gas.png" alt="Kitchen Gas Alert" />
-      <div class="content">
-        <div class="tag">
-          <h3>Kitchen Gas Alert</h3>
-        </div>
-        <div class="desc">
-          <p>Automated protection system that monitors harmful gas concentrations to prevent fires and explosions. It triggers safety mechanisms like exhaust ventilation and gas shut-offs automatically.</p>
-        </div>
-      </div>
+    <div class="box tilt" onclick="openProject('Kitchen Gas Alert', 'Protection system with MQ-2 and MQ-7 sensors to monitor LPG and CO leaks via ESP32.')">
+      <img src="./assets/images/projects/gas.jpeg" alt="Gas" />
+      <div class="content"><div class="tag"><h3>Kitchen Gas Alert</h3></div></div>
     </div>
-
-    <div class="box tilt" onclick="openProject('Automated Compost Converter', 'Features automated waste input mechanisms and sensor-controlled temperature and humidity management. It uses an ESP32 microcontroller with pH sensors and load cells to optimize biological microbial action for high-quality compost.')">
-      <img draggable="false" src="./assets/images/projects/compost.png" alt="Waste-to-Compost" />
-      <div class="content">
-        <div class="tag">
-          <h3>Waste-to-Compost</h3>
-        </div>
-        <div class="desc">
-          <p>Sustainable waste management solution for apartments that automates the transformation of kitchen waste into nutrient-rich compost. It reduces manual labor and environmental pollution while enlivening urban gardening.</p>
-        </div>
-      </div>
+    <div class="box tilt" onclick="openProject('Waste-to-Compost', 'Automated converter using pH sensors and load cells to optimize kitchen waste decomposition.')">
+      <img src="./assets/images/projects/compost.jpeg" alt="Compost" />
+      <div class="content"><div class="tag"><h3>Waste-to-Compost</h3></div></div>
     </div>
-
   </div>
 </section>
 
 <div id="projectModal" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <div id="modalBody"></div>
-    </div>
+    <div class="modal-content"><span class="close-modal">&times;</span><div id="modalBody"></div></div>
 </div>
 
 <section class="experience" id="experience">
   <h2 class="heading"><i class="fas fa-briefcase"></i> Experience </h2>
    <div class="timeline">
-    <div class="container right">
-      <div class="content">
-        <div class="tag"><h2>E-Cell UVCE Core Team Member</h2></div>
-        <div class="desc"><h3>Content Team</h3><p>2025 - Present</p></div>
-      </div>
-    </div>
-    <div class="container left">
-      <div class="content">
-        <div class="tag"><h2>Sustainable Systems</h2></div>
-        <div class="desc"><h3>Project Lead | AI Water Purification</h3><p>Jan 2026 - Present</p></div>
-      </div>
-    </div>
-    <div class="container right">
-      <div class="content">
-        <div class="tag"><h2>Technical & Creative Writer</h2></div>
-        <div class="desc"><h3>Articles, Poetry & Verses</h3><p>Ongoing</p></div>
-      </div>
-    </div>
-    <div class="container left">
-      <div class="content">
-        <div class="tag"><h2>Marvel UVCE</h2></div>
-        <div class="desc"><h3>VFX & Video Editing | Level 2</h3><p>Sept 2025 - Jan 2026</p>
-            <a href="https://hub.uvcemarvel.in/work/bf99825b-7eb8-4fac-a671-0373f01a4141" target="_blank" style="color: #ffffff; font-size: 1.4rem; text-decoration: none; display: inline-block; margin-top: 6px;"><i class="fas fa-external-link-alt" style="margin-right: 6px;"></i>View My Work</a>
-        </div>
-      </div>
-    </div>
+    <div class="container right"><div class="content"><div class="tag"><h2>E-Cell UVCE Core Team Member</h2></div><div class="desc"><h3>Content Team</h3><p>2025 - Present</p></div></div></div>
+    <div class="container left"><div class="content"><div class="tag"><h2>Sustainable Systems</h2></div><div class="desc"><h3>Project Lead | AI Water Purification</h3><p>Jan 2026 - Present</p></div></div></div>
+    <div class="container left"><div class="content"><div class="tag"><h2>Marvel UVCE</h2></div><div class="desc"><h3>VFX & Video Editing | Level 2</h3><p>Sept 2025 - Jan 2026</p>
+        <a href="https://hub.uvcemarvel.in/work/bf99825b-7eb8-4fac-a671-0373f01a4141" target="_blank" style="color: #ffffff; font-size: 1.4rem; text-decoration: none; display: inline-block; margin-top: 6px;"><i class="fas fa-external-link-alt" style="margin-right: 6px;"></i>View My Work</a>
+    </div></div></div>
 </div>
 </section>
-<section class="contact" id="contact">
-  
-  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
 
+<section class="contact" id="contact">
+  <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
   <div class="container">
     <div class="content">
-      <div class="image-box">
-        <img draggable="false" src="./assets/images/contact1.png" alt="">
-      </div>
+      <div class="image-box"><img src="./assets/images/contact1.png" alt=""></div>
     <form id="contact-form">
-      
       <div class="form-group">
-        <div class="field">
-          <input type="text" name="name" placeholder="Name" required>
-          <i class='fas fa-user'></i>
+        <div class="field"><input type="text" name="name" placeholder="Name" required><i class='fas fa-user'></i></div>
+        <div class="field"><input type="text" name="email" placeholder="Email" required><i class='fas fa-envelope'></i></div>
+        <div class="field"><input type="text" name="phone" placeholder="Phone"><i class='fas fa-phone-alt'></i></div>
+        <div class="message"><textarea placeholder="Message" name="message" required></textarea><i class="fas fa-comment-dots"></i></div>
         </div>
-        <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
-          <i class='fas fa-envelope'></i>
-        </div>
-        <div class="field">
-          <input type="text" name="phone" placeholder="Phone">
-          <i class='fas fa-phone-alt'></i>
-        </div>
-        <div class="message">
-        <textarea placeholder="Message" name="message" required></textarea>
-        <i class="fas fa-comment-dots"></i>
-        </div>
-        </div>
-      <div class="button-area">
-        <button type="submit">
-          Submit <i class="fa fa-paper-plane"></i></button>
-      </div>
+      <div class="button-area"><button type="submit">Submit <i class="fa fa-paper-plane"></i></button></div>
     </form>
   </div>
   </div>
 </section>
-<section class="footer">
+
+<footer class="footer">
   <div class="box-container">
-      <div class="box">
-          <h3>Riya's Portfolio</h3>
-          <p>Thank you for visiting my personal portfolio website. Connect with me over socials. <br/> <br/> Keep Rising 🚀</p>
-      </div>
+      <div class="box"><h3>Riya's Portfolio</h3><p>Thank you for visiting. Keep Rising 🚀</p></div>
       <div class="box">
           <h3>quick links</h3>
-          <a href="#home"><i class="fas fa-chevron-circle-right"></i> home</a>
-          <a href="#about"><i class="fas fa-chevron-circle-right"></i> about</a>
-          <a href="#skills"><i class="fas fa-chevron-circle-right"></i> skills</a>
-          <a href="#education"><i class="fas fa-chevron-circle-right"></i> education</a>
-          <a href="#projects"><i class="fas fa-chevron-circle-right"></i> projects</a>
+          <a href="#home">home</a><a href="#about">about</a><a href="#skills">skills</a><a href="#education">education</a><a href="#projects">projects</a>
       </div>
       <div class="box">
           <h3>contact info</h3>
-          <p> <i class="fas fa-envelope"></i>riyakalex5@gmail.com</p>
-          <p> <i class="fas fa-map-marked-alt"></i>Bengaluru, India</p>
+          <p><i class="fas fa-envelope"></i>riyakalex5@gmail.com</p>
           <div class="share">
-              <a href="https://www.linkedin.com/in/riyakalex" class="fab fa-linkedin" aria-label="LinkedIn" target="_blank"></a>
-              <a href="https://github.com/riyakalex" class="fab fa-github" aria-label="GitHub" target="_blank"></a>
-              <a href="mailto:riyakalex5@gmail.com" class="fas fa-envelope" aria-label="Mail" target="_blank"></a>
+              <a href="https://www.linkedin.com/in/riyakalex" class="fab fa-linkedin" target="_blank"></a>
+              <a href="https://github.com/riyakalex" class="fab fa-github" target="_blank"></a>
           </div>
       </div>
   </div>
-</section>
-<a href="#home" aria-label="ScrollTop" class="fas fa-angle-up" id="scroll-top"></a>
+</footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js"></script>
@@ -407,31 +235,11 @@
 
 <script>
     function openProject(title, description) {
-        const modal = document.getElementById("projectModal");
-        const modalBody = document.getElementById("modalBody");
-        if(modal && modalBody){
-            modalBody.innerHTML = `<h3>${title}</h3><p>${description}</p>`;
-            modal.style.display = "block";
-        }
+        document.getElementById("modalBody").innerHTML = `<h3>${title}</h3><p>${description}</p>`;
+        document.getElementById("projectModal").style.display = "block";
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        const modal = document.getElementById("projectModal");
-        const closeModal = document.querySelector(".close-modal");
-
-        if(closeModal){
-            closeModal.onclick = function() {
-                modal.style.display = "none";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    });
+    document.querySelector(".close-modal").onclick = () => document.getElementById("projectModal").style.display = "none";
+    window.onclick = (e) => { if (e.target == document.getElementById("projectModal")) document.getElementById("projectModal").style.display = "none"; }
 </script>
-
 </body>
 </html>
