@@ -1,7 +1,8 @@
 {
   "name": "riya-portfolio",
   "version": "1.0.0",
+  "description": "Riya K Alex Portfolio",
   "scripts": {
-    "build": "exit 0"
+    "build": "echo 'No build needed'"
   }
 }
