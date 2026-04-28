@@ -8,8 +8,11 @@
     <meta name="description" content="Welcome to Riya K Alex's Portfolio. Electronics & Communication Engineer" />
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.jpg" type="image/jpeg">
+    <link id='favicon' rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-png">
     <title>Portfolio | Riya K Alex </title>
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
     <style>
         /* Force visibility for skills & projects to override ScrollReveal bugs */
@@ -50,7 +53,33 @@
         
         /* Ensure the boxes respond to clicks over their entire area */
         .projects .box { cursor: pointer; }
-        .projects .box * { pointer-events: none; } 
+        .projects .box * { pointer-events: none; }
+        
+        /* Success/Error Message Styles */
+        .form-message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            text-align: center;
+            display: none;
+        }
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Loading state for button */
+        .button-area button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body oncontextmenu="return false">
@@ -91,7 +120,7 @@
       </div>
     </div>
 <div class="image">
-    <img draggable="false" class="tilt" src="./assets/images/hero.jpg" alt="">
+    <img draggable="false" class="tilt" src="./assets/images/hero.png" alt="">
 </div>
 </section>
 <section class="about" id="about">
@@ -185,6 +214,13 @@
 
             <div class="bar">
                 <div class="info">
+                  <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub"/>
+                  <span>GitHub</span>
+                </div>
+            </div>
+
+            <div class="bar">
+                <div class="info">
                   <img src="https://img.icons8.com/color/48/000000/video-editing.png" alt="VFX"/>
                   <span>VFX (Fusion)</span>
                 </div>
@@ -192,71 +228,50 @@
 
             <div class="bar">
                 <div class="info">
-                  <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva"/>
-                  <span>Canva</span>
+                  <img src="https://img.icons8.com/color/48/000000/copybook.png" alt="Technical Writing"/>
+                  <span>Technical Writing</span>
                 </div>
             </div>
 
-            <div class="bar">
-              <div class="info">
-                <img src="https://img.icons8.com/glyph-neue/48/ffffff/github.png" alt="GitHub"/>
-                <span>GitHub</span>
-              </div>
-            </div>
       </div>
 </div>
 </section>
 <section class="education" id="education">
-
   <h1 class="heading"><i class="fas fa-graduation-cap"></i> My <span>Education</span></h1>
 
-    <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
+  <p class="qoute">Education is not the learning of facts, but the training of the mind to think.</p>
 
-    <div class="box-container">
+  <div class="box-container">
 
-    <div class="box">
-        <div class="image">
-        <img draggable="false" src="./assets/images/educat/college.jpg" alt="">
-        </div>
-        <div class="content">
-        <h3>Bachelor of Engineering in Electronics and Communication</h3>
-        <p>University of Visvesvaraya College of Engineering | Bengaluru</p>
-        <h4>Pursuing</h4>
-        </div>
-    </div>
-
-    <div class="box">
+  <div class="box">
       <div class="image">
-      <img draggable="false" src="./assets/images/educat/school.jpg" alt="">
+      <img draggable="false" src="./assets/images/educat/uvce.png" alt="">
       </div>
       <div class="content">
-      <h3>PUC </h3>
-      <p>M K C P M PU College | N R Pura</p>
-      <h4>Completed</h4>
+      <h3>Bachelor of Engineering in Electronics & Communication</h3>
+      <p>University Visvesvaraya College of Engineering (UVCE)</p>
+      <h4>2023-2027 | Pursuing</h4>
       </div>
+  </div>
+
+  <div class="box">
+    <div class="image">
+    <img draggable="false" src="./assets/images/educat/school.png" alt="">
     </div>
+    <div class="content">
+    <h3>HSC Science | Computer Science</h3>
+    <p>Carmel PU College | State Board</p>
+    <h4>2021-2023 | Completed</h4>
+    </div>
+  </div>
 
 </div>
 </section>
-
 <section class="projects" id="projects">
   <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
 
   <div class="box-container">
-
-    <div class="box tilt" onclick="openProject('AI Water Purification', 'Project Lead for an AI-powered, low-cost filtration system. It uses an ESP32 microcontroller to collect data from pH, TDS, and turbidity sensors, processing it with an embedded AI model to automate purification via UVC LED and pump control.')">
-      <img draggable="false" src="./assets/images/projects/water.png" alt="AI Water Purification" />
-      <div class="content">
-        <div class="tag">
-          <h3>AI Water Purification</h3>
-        </div>
-        <div class="desc">
-          <p>An intelligent system using machine learning and real-time sensor data to classify water safety and automate purification actions. It provides potable water in resource-constrained environments by monitoring pH, TDS, and turbidity.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="box tilt" onclick="openProject('ISRO Hackathon: Chanakya', 'Developed for the Bharatiya Antariksh Hackathon 2025, this system uses natural language querying to perform complex spatial tasks. The architecture utilizes Google Gemini and LangGraph to orchestrate geospatial tools like GeoPandas and Folium for automated map generation.')">
+    <div class="box tilt" onclick="openProject('Bharatiya Antariksh Hackathon 2025', 'Developed for the Bharatiya Antariksh Hackathon 2025, this system uses natural language querying to perform complex spatial tasks. The architecture utilizes Google Gemini and LangGraph to orchestrate geospatial tools like GeoPandas and Folium for automated map generation.')">
       <img draggable="false" src="./assets/images/projects/isro.png" alt="ISRO Project" />
       <div class="content">
         <div class="tag">
@@ -281,7 +296,7 @@
     </div>
 
     <div class="box tilt" onclick="openProject('Automated Compost Converter', 'Features automated waste input mechanisms and sensor-controlled temperature and humidity management. It uses an ESP32 microcontroller with pH sensors and load cells to optimize biological microbial action for high-quality compost.')">
-      <img draggable="false" src="./assets/images/projects/compost.jpg" alt="Waste-to-Compost" />
+      <img draggable="false" src="./assets/images/projects/compost.png" alt="Waste-to-Compost" />
       <div class="content">
         <div class="tag">
           <h3>Waste-to-Compost</h3>
@@ -350,7 +365,7 @@
           <i class='fas fa-user'></i>
         </div>
         <div class="field">
-          <input type="text" name="email" placeholder="Email" required>
+          <input type="email" name="email" placeholder="Email" required>
           <i class='fas fa-envelope'></i>
         </div>
         <div class="field">
@@ -363,9 +378,13 @@
         </div>
         </div>
       <div class="button-area">
-        <button type="submit">
+        <button type="submit" id="submit-btn">
           Submit <i class="fa fa-paper-plane"></i></button>
       </div>
+      
+      <!-- Success/Error Message -->
+      <div id="form-message" class="form-message"></div>
+      
     </form>
   </div>
   </div>
@@ -403,9 +422,17 @@
 <script src="./assets/js/particles.min.js"></script>
 <script src="./assets/js/app.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
 <script src="./assets/js/script.js"></script>
 
 <script>
+    // Initialize EmailJS with your Public Key
+    // Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+    (function() {
+        emailjs.init('YOUR_PUBLIC_KEY'); // Replace with your actual public key
+    })();
+
+    // Project Modal Functions
     function openProject(title, description) {
         const modal = document.getElementById("projectModal");
         const modalBody = document.getElementById("modalBody");
@@ -430,6 +457,56 @@
                 modal.style.display = "none";
             }
         }
+        
+        // Contact Form Submission with EmailJS
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const formMessage = document.getElementById('form-message');
+        
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            // Disable submit button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+            formMessage.style.display = 'none';
+            
+            // Send email using EmailJS
+            // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    
+                    // Show success message
+                    formMessage.className = 'form-message success';
+                    formMessage.textContent = '✓ Message sent successfully! I\'ll get back to you soon.';
+                    formMessage.style.display = 'block';
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Submit <i class="fa fa-paper-plane"></i>';
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                    
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    
+                    // Show error message
+                    formMessage.className = 'form-message error';
+                    formMessage.textContent = '✗ Oops! Something went wrong. Please try again or email me directly.';
+                    formMessage.style.display = 'block';
+                    
+                    // Re-enable button
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = 'Submit <i class="fa fa-paper-plane"></i>';
+                });
+        });
     });
 </script>
 
